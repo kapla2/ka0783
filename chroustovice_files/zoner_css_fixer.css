@@ -1,0 +1,13 @@
+.zoner-settings-button-top-fix {
+    margin-top: -5px;
+}
+
+html.dark-mode .table-hover tbody tr:hover {
+	color: inherit!important;
+}
+
+.recipient-input li.recipient .email, body > li.recipient.ui-sortable-helper .email {
+    text-indent: 0 !important;
+	display: inline-block;
+    width: initial;
+}

